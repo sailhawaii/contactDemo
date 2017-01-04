@@ -11,7 +11,8 @@
     "animate.css": "~3.4.0",
     "angular": "~1.5.3",
     "angular-smart-table": "^2.1.8",
-    "components-font-awesome": "^4.7.0"
+    "components-font-awesome": "^4.7.0",
+    "angularLocalStorage": "^0.3.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"

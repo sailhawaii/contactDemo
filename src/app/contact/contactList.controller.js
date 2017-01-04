@@ -6,10 +6,17 @@
     .controller('ContactListController', ContactListController);
 
   /** @ngInject */
-  function ContactListController(Restangular, $uibModal, $log) {
+  function ContactListController(Restangular, $uibModal, $log, storage) {
     var vm = this;
 
     vm.contacts = [];
+
+    vm.clearLocalStorage = function(){
+      storage.clearAll();
+      $log.log("Local Storage Cleared");
+      activate();
+      
+    }
 
     vm.openEditModal = function (row) {
       var contact = {};
@@ -34,12 +41,19 @@
 
       modalInstance.result.then(function (editedItem) {
         angular.copy(editedItem, contact);
+        storage.set('contacts', vm.contacts);
       });
     };
 
 
     function activate() {
-      loadContacts();
+
+    vm.contacts = storage.get('contacts');
+     if (vm.contacts === null){
+        loadContacts();
+     }
+
+      
     }
 
     activate();
@@ -49,6 +63,7 @@
       Restangular.one("assets/mock/contacts.json").getList().then(
         function (results) {
           vm.contacts = results.plain();
+          storage.set('contacts', vm.contacts);
         },
         function () {
           alert("Unable to retrieve contacts");
