@@ -6,12 +6,10 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, Restangular) {
+  function MainController(Restangular) {
     var vm = this;
 
     vm.contacts = [];
-
-vm.test="Hello";
   
     activate();
 
@@ -20,7 +18,6 @@ vm.test="Hello";
 Restangular.one("assets/mock/contacts.json").getList().then(
   function(results){
     vm.contacts = results;
-    //console.dir(results);
   },
   function(){
     alert("Unable to retrieve contancts");

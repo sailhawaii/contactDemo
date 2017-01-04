@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Edit {{editContact.contact.name}}'s Contact Details</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" ng-model="editContact.contact.name" placeholder="Enter contact's full name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="title">Title:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="title" ng-model="editContact.contact.title" placeholder="Enter contact's job title">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="phone">Phone:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="phone" ng-model="editContact.contact.phone" placeholder="Enter primary phone number">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="fax">Fax:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fax" ng-model="editContact.contact.fax" placeholder="Enter password">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" ng-model="editContact.contact.email" placeholder="Enter email">
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="editContact.save()">Save</button>
+            <button class="btn btn-warning" type="button" ng-click="editContact.cancel()">Cancel</button>
+        </div>
