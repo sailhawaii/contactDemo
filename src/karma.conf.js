@@ -21,7 +21,7 @@ function listFiles() {
       path.join(conf.paths.src, '/app/**/*.module.js'),
       path.join(conf.paths.src, '/app/**/*.js'),
       path.join(conf.paths.src, '/**/*.spec.js'),
-      path.join(conf.paths.src, '/**/*.mock.js'),
+      path.join(conf.paths.src, '/**/*.mock.js')
     ])
     .concat(pathSrcHtml);
 
@@ -53,7 +53,7 @@ module.exports = function(config) {
       moduleName: 'contactDemo'
     },
 
-    logLevel: 'WARN',
+    logLevel: 'DEBUG',
 
     frameworks: ['phantomjs-shim', 'jasmine', 'angular-filesort'],
 

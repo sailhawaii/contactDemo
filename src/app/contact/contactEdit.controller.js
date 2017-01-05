@@ -6,10 +6,11 @@
     .controller('ContactEditController', ContactEditController);
 
   /** @ngInject */
-  function ContactEditController($uibModalInstance, contact) {
+  function ContactEditController($uibModalInstance, contact, isNew) {
 
     var vm = this;
     vm.contact = contact;
+    vm.isNew = isNew;
 
     vm.save = function () {
       $uibModalInstance.close(vm.contact);

@@ -12,7 +12,7 @@
 	</h3>
 
 	<div class="table-contacts" style="padding-top:20px;">
-
+<div class="btn btn-small btn-default" ng-click="contacts.edit()"><span class="fa fa-plus"></span> Add Contact</div>
 		<table st-table="displayedCollection" st-safe-src="contacts.contacts" class="table table-striped table-curved">
 			<thead>
 				<tr class="contact-header">
@@ -42,7 +42,8 @@
 						</div>
 
 					</td>
-					<td>	<div class="btn btn-default" ng-click="contacts.openEditModal(row)"><span class="fa fa-pencil-square-o"></span> Edit</div></td>
+					<td>	<div class="btn btn-small btn-default" ng-click="contacts.edit(row)"><span class="fa fa-pencil-square-o"></span> Edit</div>
+					<div class="btn btn-small btn-default" ng-click="contacts.delete(row)"><span class="fa fa-trash"></span> Delete</div></td>
 					<td>{{row.type}}</td>
 					<td>{{row.name}}</td>
 					<td>{{row.title}}</td>

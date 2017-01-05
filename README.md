@@ -10,3 +10,7 @@ A simple demo of a contact page
 1. Go to the project directory
 2. Add the bower dependencies (bower install)
 3. Run the Gulp command to launch the app (gulp serve)
+
+#Running the tests:
+1. Go to the project directory
+2. Run the Gulp command to lauch the tests (gulp test)
