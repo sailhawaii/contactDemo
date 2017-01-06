@@ -12,6 +12,14 @@ h1 {
   line-height: 1.25em;
 }
 
-a:hover, a:focus {
-  color: greenyellow;
+.navbar-inverse > a:hover, a:focus {
+  color: whitesmoke;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #c7c7c7;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #c3ba9c;
 }
